@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamCodex - Enterprise Software Solutions</title>
+    <meta name="description" content="DreamCodex provides cutting-edge enterprise software solutions using modern technologies like Java, Spring Boot, React, and cloud platforms.">
+    
+    <!-- EmailJS CDN for email functionality -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // Initialize EmailJS (optional - replace with your public key when ready)
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("your_public_key_here");
+            }
+        })();
+    </script>
+    
+    <!-- Hidden form for Netlify Forms (backup email handling) -->
+    <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="company" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+    </form>
+    
+    <form name="newsletter" netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="email" name="email" />
+    </form>
+    
+    <form name="career" netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="position" />
+        <input type="text" name="experience" />
+        <textarea name="coverLetter"></textarea>
+        <input type="file" name="resume" />
+    </form>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
